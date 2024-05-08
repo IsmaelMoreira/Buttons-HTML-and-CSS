@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #010a01;
+}
+
+.btn-rgb {
+  color: white;
+  font-family: 'kanit', sans-serif;
+  border: 1px inset white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 2rem;
+  padding: 10px;
+  margin: 10px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
+  background-size: 200% 100%;
+  animation: moveRightToLeft 10s linear infinite alternate;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-rgb:hover {
+  animation: shadowColors 10s infinite alternate;
+  background: #010a01;
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shadowColors {
+  0% {
+    box-shadow: 0px 0px 70px rgba(255, 0, 0, 0.7);
+  }
+  25% {
+    box-shadow: 0px 0px 70px rgba(0, 255, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0px 0px 70px rgba(0, 0, 255, 0.7);
+  }
+  75% {
+    box-shadow: 0px 0px 70px rgba(255, 255, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0px 0px 70px rgba(255, 0, 255, 0.7);
+  }
+}
