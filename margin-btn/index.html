@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </head>
+
+  <body>
+    <div id="mensagemCompra"></div>
+    <button class="gif-btn" id="btnCompra">
+      <lord-icon
+        src="https://cdn.lordicon.com/eiekfffz.json"
+        trigger="hover">
+      </lord-icon>
+    </button>
+  </body>
+
+  <script>
+// Função para exibir a mensagem de sucesso
+function exibirMensagemDeCompra() {
+    alert("Compra realizada com sucesso!");
+}
+// Adiciona um ouvinte de evento de clique ao botão de compra
+document.getElementById("btnCompra").addEventListener("click", exibirMensagemDeCompra);
+  </script>
+
+</html>
